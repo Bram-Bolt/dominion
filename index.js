@@ -5,9 +5,9 @@ const Discord = require('discord.js');
 
 const config = require("./config.json");
 
-const config = require("./secret.json");
-
 const package = require("./package.json");
+
+const package = require("./config.json");
 
 const fs = require("fs");
 
@@ -162,23 +162,23 @@ client.on('messageReactionAdd', async (reaction, user) => {
 
          if (reaction.message.channel.id == ideaChannel) {
 
-           if (reaction.message.guild.members.cache.get(user.id).hasPermission('KICK_MEMBERS')) {
-             return console.log("staff")
+           if (reaction.message.guild.members.cache.get(user.id).hasPermission('ADMINISTRATOR')) {
+             let x = a
 
            } else
 
 
            if (reaction.emoji.id === likeEmoji.id) {
-               console.log("upvote")
+               let x = b
              } else
 
             if (reaction.emoji.id === dislikeEmoji.id) {
-                 console.log("downvote")
+                 let x = c
                } else {
 
                 reaction.remove(user);
 
-               console.log("removed");
+
              }
 
          } else {
