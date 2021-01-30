@@ -5,6 +5,8 @@ const Discord = require('discord.js');
 
 const config = require("./config.json");
 
+const config = require("./secret.json");
+
 const package = require("./package.json");
 
 const fs = require("fs");
@@ -186,4 +188,4 @@ client.on('messageReactionAdd', async (reaction, user) => {
      });
 
 
-client.login(config.token)
+client.login(secret.token)
