@@ -1,0 +1,8 @@
+{
+"name": "Dominion",
+"version": "1.0.0",
+"description": "Domino Plaza Custom Bot",
+"main": "index.js",
+"author": "Chappie#1852",
+"dependencies": {}
+}
