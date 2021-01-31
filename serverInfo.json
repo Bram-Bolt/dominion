@@ -1,0 +1,28 @@
+{
+
+  "ip": "play.dominoplaza.nl",
+  "dynmap": "https://dynmap.dominoplaza.nl/",
+  "instagram": "@dominoplaza",
+  "website": "`soon`",
+  "discord": "https://dominoplaza.nl/discord",
+  "shop": "https://shop.dominoplaza.nl",
+
+  "vacatures": [{
+    "naam": "StaffTeam",
+    "link":"`Momenteel gesloten.`"
+    },
+    {
+      "naam": "Bouw-Team",
+      "link":"https://forms.gle/EXkJyb7KS3ziDWNc8"
+      },
+      {
+        "naam": "Media-Team",
+        "link":"https://forms.gle/EXkJyb7KS3ziDWNc8"
+        },
+    {
+      "naam": "Overig",
+      "link":"https://forms.gle/EXkJyb7KS3ziDWNc8"
+    }]
+
+
+}
