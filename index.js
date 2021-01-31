@@ -7,7 +7,7 @@ const config = require("./config.json");
 
 const package = require("./package.json");
 
-const package = require("./config.json");
+const secret = require("./secret.json");
 
 const fs = require("fs");
 
@@ -163,21 +163,21 @@ client.on('messageReactionAdd', async (reaction, user) => {
          if (reaction.message.channel.id == ideaChannel) {
 
            if (reaction.message.guild.members.cache.get(user.id).hasPermission('ADMINISTRATOR')) {
-             let x = a
+
 
            } else
 
 
            if (reaction.emoji.id === likeEmoji.id) {
-               let x = b
+
              } else
 
             if (reaction.emoji.id === dislikeEmoji.id) {
-                 let x = c
+
                } else {
 
-                reaction.remove(user);
-
+                console.log(user)
+                reaction.users.remove(user);
 
              }
 
@@ -186,6 +186,16 @@ client.on('messageReactionAdd', async (reaction, user) => {
          }
 
      });
+
+     client.on("voiceStateUpdate", (oldVoiceState, newVoiceState) => {
+    if (newVoiceState.channel) { //de speler joined een voice channel
+      newVoiceState.member.roles.add(config.callRole);
+
+    } else if (oldVoiceState.channel) { //de speler leaved een voice channel
+      oldVoiceState.member.roles.remove(config.callRole);
+
+    };
+});
 
 
 client.login(secret.token)
