@@ -3,12 +3,6 @@ const {Client, MessageAttachment } = require('discord.js');
 
 const Discord = require('discord.js');
 
-const config = require("./config.json");
-
-const package = require("./package.json");
-
-const secret = require("./secret.json");
-
 const fs = require("fs");
 
 const fetch = require('node-fetch');
@@ -19,13 +13,18 @@ const invites = {};
 
 const client = new Discord.Client({ partials: ["MESSAGE", "CHANNEL", "REACTION" ]});
 
-//config instellingen
+//requires eigen instellingen
 
+const config = require("./config.json");
+
+const package = require("./package.json");
+
+const secret = require("./secret.json");
+
+
+//config  afkorter
 const logChannel = config.logChannel;
 const ideaChannel = config.ideaChannel;
-
-
-
 const prefix = config.prefix;
 
 //command files
@@ -144,6 +143,50 @@ client.on("message", message => {
   }
   if(command === 'ban'){
     client.commands.get('ban').execute(message, args, Discord, client, config, wait);
+  }
+  //info go brrr
+  let serverInfoRuw = fs.readFileSync("./serverInfo.json");
+  let serverInfo = JSON.parse(serverInfoRuw);
+
+
+  if(command === 'ip'){
+    client.commands.get('ip').execute(message, args, Discord, client, config, serverInfo);
+  }
+
+  if(command === 'discord'){
+    client.commands.get('discord').execute(message, args, Discord, client, config, serverInfo);
+  }
+
+  if(command === 'shop'){
+    client.commands.get('shop').execute(message, args, Discord, client, config, serverInfo);
+  }
+
+  if(command === 'dynmap'){
+    client.commands.get('dynmap').execute(message, args, Discord, client, config, serverInfo);
+  }
+
+  if(command === 'instagram'){
+    client.commands.get('instagram').execute(message, args, Discord, client, config, serverInfo);
+  }
+
+  if(command === 'insta'){
+    client.commands.get('instagram').execute(message, args, Discord, client, config, serverInfo);
+  }
+
+  if(command === 'website'){
+    client.commands.get('website').execute(message, args, Discord, client, config, serverInfo);
+  }
+
+  if(command === 'store'){
+    client.commands.get('shop').execute(message, args, Discord, client, config, serverInfo);
+  }
+
+  if(command === 'links'){
+    client.commands.get('links').execute(message, args, Discord, client, config, serverInfo);
+  }
+
+  if(command === 'vacatures'){
+    client.commands.get('vacatures').execute(message, args, Discord, client, config, serverInfo);
   }
 
   });
