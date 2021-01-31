@@ -4,5 +4,11 @@
 "description": "Domino Plaza Custom Bot",
 "main": "index.js",
 "author": "Chappie#1852",
-"dependencies": {}
+  "dependencies": {
+    "node-fetch": "^2.6.1",
+    "discord.js": "^12.5.1",
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
 }
