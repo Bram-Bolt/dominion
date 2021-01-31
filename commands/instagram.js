@@ -1,13 +1,13 @@
 module.exports = {
-  name: "ip",
-  description: "geeft het ip van de server",
+  name: "instagram",
+  description: "geeft de instagram van de server",
   execute(message, args, Discord, client, config, serverInfo){
 
 
-    let embed = new Discord.MessageEmbed()
+        let embed = new Discord.MessageEmbed()
                   .setColor('#ffc603')
-                  .setTitle('Server ip!')
-                  .setDescription("Het ip van de server is: `" + serverInfo.ip + "`")
+                  .setTitle('Instagram!')
+                  .setDescription("Volg ons network op Instagram via: `" + serverInfo.instagram + "`!")
                   .setFooter("Voor meer informatie doe" + config.prefix + " !links.", "https://i.imgur.com/cYtNPbX.png");
 
 
