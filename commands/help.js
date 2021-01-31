@@ -1,12 +1,12 @@
 module.exports = {
   name: "help",
   description: "help",
-   async execute(message, args, Discord, client, config, fetch, geleberen, verjaardag, wait){
+   async execute(message, args, Discord, client, config, serverInfo){
      p = config.prefix;
      const embed = {
        "title": "Lijst van commando's voor RobotBeerV2!",
        "description": "Naast deze commando's bevat deze bot nog meer extra features! Wil je weten welke? Contacteer @Chappie#1852 voor meer informatie!",
-       "color": "#00ffff",
+       "color": "#ffc603",
        "footer": {
          "icon_url": "https://i.imgur.com/xTfJeqb.png",
          "text": "Dit bericht is verzonden met behulp van RobotBeerV2."
@@ -25,7 +25,7 @@ module.exports = {
          },
          {
            "name": "Other",
-           "value":  p +"Gelebeer - Gebruik" + p+ "help gelebeer voor meer informatie. \n"+ p +"Ping - Pong! \n"+ p +"Gans - Kijkt of je wel of geen gans maakt."
+           "value":  p +"Gelebeer - Gebruik" + p + "help gelebeer voor meer informatie. \n"+ p +"Ping - Pong! \n"+ p +"Gans - Kijkt of je wel of geen gans maakt."
          }
        ]
      };
