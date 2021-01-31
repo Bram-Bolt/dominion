@@ -4,6 +4,11 @@
 "description": "Domino Plaza Custom Bot",
 "main": "index.js",
 "author": "Chappie#1852",
+"homepage": "https://github.com/Chaplingund/dominion",
+  "repository": "github:Chaplingund/dominion",
+  "engines": {
+    "node": ">=15.5.0"
+  },
   "dependencies": {
     "node-fetch": "^2.6.1",
     "discord.js": "^12.5.1",
