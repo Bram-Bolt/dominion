@@ -7,9 +7,9 @@ module.exports = {
 
         let embed = new Discord.MessageEmbed()
                       .setColor('#ffc603')
-                      .setTitle('Dynmap!')
+                      .setTitle('Dynmap')
                       .setDescription("De dynmap van PlanetRisk is: " + serverInfo.dynmap + " !")
-                      .setFooter("Voor meer informatie doe" + config.prefix + " !links.", "https://i.imgur.com/cYtNPbX.png");
+                      .setFooter("Voor meer informatie doe" + config.prefix + " links.", "https://i.imgur.com/cYtNPbX.png");
 
 
 
