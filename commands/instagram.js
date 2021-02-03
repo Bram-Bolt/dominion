@@ -6,9 +6,9 @@ module.exports = {
 
         let embed = new Discord.MessageEmbed()
                   .setColor('#ffc603')
-                  .setTitle('Instagram!')
+                  .setTitle('Instagram')
                   .setDescription("Volg ons network op Instagram via: `" + serverInfo.instagram + "`!")
-                  .setFooter("Voor meer informatie doe" + config.prefix + " !links.", "https://i.imgur.com/cYtNPbX.png");
+                  .setFooter("Voor meer informatie doe" + config.prefix + " links.", "https://i.imgur.com/cYtNPbX.png");
 
 
 
