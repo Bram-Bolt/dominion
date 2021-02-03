@@ -22,4 +22,4 @@ module.exports = {
       client.channels.cache.get(logChannel).send("```punishment: " + message.author.tag + " heeft zojuist " + args[0] + " berichten verwijderd in #" + message.channel.name + ".```");
     }
   }
-;
+
