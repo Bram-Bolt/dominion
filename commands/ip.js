@@ -6,9 +6,9 @@ module.exports = {
 
     let embed = new Discord.MessageEmbed()
                   .setColor('#ffc603')
-                  .setTitle('Server ip!')
-                  .setDescription("Het ip van de server is: `" + serverInfo.ip + "`")
-                  .setFooter("Voor meer informatie doe" + config.prefix + " !links.", "https://i.imgur.com/cYtNPbX.png");
+                  .setTitle('Server IP')
+                  .setDescription("Het IP van de server is: `" + serverInfo.ip + "`")
+                  .setFooter("Voor meer informatie doe" + config.prefix + " links.", "https://i.imgur.com/cYtNPbX.png");
 
 
 
