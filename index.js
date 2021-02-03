@@ -64,7 +64,7 @@ client.on('ready', () => {
 
   var tijd = showTime()
 
-  client.channels.cache.get(logChannel).send(package.name + " is geherstart om: " +   tijd + ".");
+  client.channels.cache.get(logChannel).send("```" + package.name + " is geherstart om: " +   tijd + "." + "```");
 
 });
 
@@ -185,11 +185,46 @@ client.on("message", message => {
     client.commands.get('links').execute(message, args, Discord, client, config, serverInfo);
   }
 
+  if(command === 'tester'){
+    client.commands.get('tester').execute(message, args, Discord, client, config, serverInfo, fetch);
+  }
+
+
   if(command === 'vacatures'){
     client.commands.get('vacatures').execute(message, args, Discord, client, config, serverInfo);
   }
 
-  });
+  if(command === 'server'){
+    client.commands.get('server').execute(message, args, Discord, client, config, serverInfo, fetch).catch((err) => {
+
+        message.channel.send("Er is iets misgegaan bij het uitvoeren van dit commando :(, conroleer" + prefix + "status of probeer op het later opnieuw.")
+        client.channels.cache.get(logChannel).send("**Console Error:**\n```+" + err +"```");
+        });
+      }
+
+  if(command === 'leiders'){
+    client.commands.get('landen').execute(message, args, Discord, client, config, serverInfo, fetch);
+  }
+
+  if(command === 'landen'){
+    client.commands.get('landen').execute(message, args, Discord, client, config, serverInfo, fetch);
+  }
+
+  if(command === 'status'){
+    client.commands.get('status').execute(message, args, Discord, client, config, serverInfo, fetch);
+  }
+
+  if(command === 'help'){
+    client.commands.get('help').execute(message, args, Discord, client, config, fetch, package, serverInfo);
+  }
+  if(command === 'whois'){
+    client.commands.get('whois').execute(message, args, Discord, client, config, fetch, package, serverInfo)/*.catch((err) => {
+
+        message.channel.send("Speler niet gevonden :(")
+      }); */
+  }
+
+});
 
 //staff vote checker
 
@@ -198,7 +233,12 @@ client.on('messageReactionAdd', async (reaction, user) => {
          if (reaction.partial) await reaction.fetch();
          if (user.bot) return;
          if (!reaction.message.guild) return;
-
+         if (reaction.emoji.name === "🤡") {
+           console.log("clown");
+           var clown = reaction.message.guild.members.cache.get(user.id);
+           clown.send("https://media.tenor.com/images/712249be671069c9201ee5c6dca22315/tenor.gif").catch((err) => { });
+           reaction.users.remove(user);
+          }
 
          const likeEmoji = client.emojis.cache.get(config.upvoteEmoji);
          const dislikeEmoji = client.emojis.cache.get(config.downvoteEmoji);
