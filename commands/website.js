@@ -5,9 +5,9 @@ module.exports = {
 
     let embed = new Discord.MessageEmbed()
                   .setColor('#ffc603')
-                  .setTitle('Server Shop!')
+                  .setTitle('Website')
                   .setDescription("De website van ons netwerk is: " + serverInfo.website + " !")
-                  .setFooter("Voor meer informatie doe" + config.prefix + " !links.", "https://i.imgur.com/cYtNPbX.png");
+                  .setFooter("Voor meer informatie doe" + config.prefix + " links.", "https://i.imgur.com/cYtNPbX.png");
 
 
 
