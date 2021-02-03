@@ -6,7 +6,7 @@ module.exports = {
   name: "mute",
   description: "Mute een speler.",
   async execute(message, args, Discord, client, config){
-    if (!message.member.hasPermission('KICK_MEMBERS'))return message.reply("Je hebt niet de permissies om te kicken!");
+    if (!message.member.hasPermission('KICK_MEMBERS'))return message.reply("Je hebt niet de permissies om te muten!");
     const target = message.mentions.users.first();
         if (target) {
 
