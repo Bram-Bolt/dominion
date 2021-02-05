@@ -40,8 +40,14 @@ module.exports = {
             const data12 = await response12.json();
 
 
+
             var spelerLijst = data12.Playerlist
+            var check =  spelerLijst.includes(spelerInfo.name)
+            console.log(check)
             console.log(spelerLijst);
+            if(check === true){
+              mcStatus = "online"
+            }
 
                let embed = {
                  "title": `Minecraft informatie over ${spelerInfo.name.replaceAll("_","\\_")}` ,
