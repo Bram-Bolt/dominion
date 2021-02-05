@@ -7,7 +7,7 @@ module.exports = {
                   .setColor('#ffc603')
                   .setTitle('Server Informatie!')
                   .setThumbnail("https://i.imgur.com/JQFcAU4.png")
-                  .setDescription("**IP:** `" + serverInfo.ip + "`\n **Dynmap:** " + serverInfo.dynmap + "\n **Instagram:** `" + serverInfo.instagram  + "`\n **Website:** " + serverInfo.website + "\n **Discord:** " + serverInfo.discord + "\n **Shop:** " + serverInfo.shop + "\n **Landen Overzicht:** " + serverInfo.landen +  "\n **Vacatures:** voor vacatures bekijk " + config.prefix +"vacatures.")
+                  .setDescription("**IP:** `" + serverInfo.ip + "`\n **Dynmap:** " + serverInfo.dynmap + "\n **Instagram:** `" + serverInfo.instagram  + "`\n **Website:** " + serverInfo.website + "\n **Discord:** " + serverInfo.discord + "\n **Shop:** " + serverInfo.shop + "\n **Landen Overzicht:** " + serverInfo.landen + "\n **Vote Link:** " + serverInfo.vote +  "\n **Vacatures:** voor vacatures bekijk " + config.prefix +"vacatures.")
                   .setFooter("Voor verdere informatie maak gerust een ticket aan!", "https://i.imgur.com/cYtNPbX.png");
 
 
