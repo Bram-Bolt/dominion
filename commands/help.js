@@ -24,7 +24,7 @@ module.exports = {
          },
          {
            "name": "Links",
-           "value":  p +"Shop - Geeft de link naar de shop." + p+ "Landen - Geeft de link naar het landen overzicht. \n"+ p + "Discord - Geeft de officieële Discord link weer. \n"+ p + "Dynmap - Geeft de link naar Dynmap van PlanetRisk weer. \n"+ p + "Website - Geeft de link naar de website weer. \n"+ p + "Instagram - Geeft ons Instagram account weer."
+           "value":  p +"Shop - Geeft de link naar de shop." + p+ "Landen - Geeft de link naar het landen overzicht. \n"+ p + "Discord - Geeft de officieële Discord link weer. \n"+ p + "Dynmap - Geeft de link naar Dynmap van PlanetRisk weer. \n"+ p + "Website - Geeft de link naar de website weer. \n"+ p + "Instagram - Geeft ons Instagram account weer.\n" + p + "Vote - Geeft de vote link van de server weer,"
          }
        ]
      };
