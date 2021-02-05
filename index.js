@@ -210,18 +210,25 @@ client.on("message", message => {
     client.commands.get('landen').execute(message, args, Discord, client, config, serverInfo, fetch);
   }
 
+  if(command === 'vote'){
+    client.commands.get('vote').execute(message, args, Discord, client, config, serverInfo, fetch);
+  }
+
   if(command === 'status'){
-    client.commands.get('status').execute(message, args, Discord, client, config, serverInfo, fetch);
+    client.commands.get('status').execute(message, args, Discord, client, config, serverInfo, fetch).catch((err) => {
+
+        console.log(err)
+      });
   }
 
   if(command === 'help'){
     client.commands.get('help').execute(message, args, Discord, client, config, fetch, package, serverInfo);
   }
   if(command === 'whois'){
-    client.commands.get('whois').execute(message, args, Discord, client, config, fetch, package, serverInfo)/*.catch((err) => {
+    client.commands.get('whois').execute(message, args, Discord, client, config, fetch, package, serverInfo).catch((err) => {
 
         message.channel.send("Speler niet gevonden :(")
-      }); */
+      });
   }
 
 });
