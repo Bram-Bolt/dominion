@@ -22,7 +22,7 @@ module.exports = {
    var spelerLijst = data2.Playerlist
    var spelers = ""
    spelerLijst.forEach(element => {
-        var elementX = element.replaceAll("_","\\_");
+               var elementX = element.replace(/"_"/g,"\\_");
         spelers = spelers + "\n" + elementX
 
       });
